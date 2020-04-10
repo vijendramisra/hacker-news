@@ -3,8 +3,7 @@ import Button from "../atoms/Button";
 const Filters = () => {
     return (
         <>
-            <Button>top</Button>
-            <Button>new</Button>
+            <Button>top</Button> | <Button>new</Button>
         </>
     );
 };

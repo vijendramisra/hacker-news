@@ -10,7 +10,7 @@ const ArticleInfo = (props) => {
             >
                 {props.domain}
             </a>
-            <span>by</span>
+            <span> by </span>
             <span className={props.authorClassName}>{props.author}</span>
             <span className={props.timeClassName}>{props.time}</span>
         </>
