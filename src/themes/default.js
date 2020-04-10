@@ -11,4 +11,5 @@ export default {
     fontWeightRegular: 400,
     fontSizeMedium: "0.75rem",
     fontSizeSmall: "0.5rem",
+    fontSizeBig: "1rem",
 };

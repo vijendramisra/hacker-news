@@ -1,9 +1,10 @@
 import React from "react";
-import Count from "../atoms/Count";
-import Title from "../atoms/Title";
-import ArticleInfo from "../atoms/ArticleInfo";
+import Count from "../../atoms/Count";
+import Title from "../../atoms/Title";
+import ArticleInfo from "../../atoms/ArticleInfo";
+import * as S from "./ArticleItemRow.style";
 
-const ArticleItemRow = ({ item }) => {
+const ArticleItemRow = ({ item, isEven }) => {
     const {
         num_comments,
         objectID,
@@ -15,7 +16,7 @@ const ArticleItemRow = ({ item }) => {
     } = item;
     return (
         <>
-            <li>
+            <S.StyledArticleItemRow isEven={isEven}>
                 <Count
                     key={`comment-${objectID}`}
                     count={num_comments}
@@ -29,7 +30,7 @@ const ArticleItemRow = ({ item }) => {
                     url={url}
                     time={created_at}
                 />
-            </li>
+            </S.StyledArticleItemRow>
         </>
     );
 };
