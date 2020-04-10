@@ -5,4 +5,7 @@ export const StyledArticleItemRow = styled.li`
         props.isEven
             ? props.theme.primaryRowColor
             : props.theme.secondaryRowColor};
+    padding: 10px 40px;
+    margin: 0;
+    display: flex;
 `;

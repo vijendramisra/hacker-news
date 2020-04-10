@@ -1,7 +1,8 @@
 import React from "react";
+import StyledLogo from "./Logo.style";
 
-const Logo = (props) => {
-    return <div className={props.className}>{props.children}</div>;
+const Logo = ({ className, children }) => {
+    return <StyledLogo className={className}>{children}</StyledLogo>;
 };
 
 export default Logo;

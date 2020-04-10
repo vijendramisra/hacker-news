@@ -5,4 +5,6 @@ export const StyledHeader = styled.div`
     font-size: ${(props) => props.theme.fontSizeBig};
     font-weight: ${(props) => props.theme.fontWeightRegular};
     background: ${(props) => props.theme.mainRowColor};
+    padding: 10px;
+    display: flex;
 `;

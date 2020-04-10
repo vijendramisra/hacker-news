@@ -2,6 +2,9 @@ import React from "react";
 import Count from "../../atoms/Count";
 import Title from "../../atoms/Title";
 import ArticleInfo from "../../atoms/ArticleInfo";
+import Button from "../../atoms/Button";
+import { LABEL_HIDE_BTN } from "../../../constants";
+import { getDomain } from "../../../utils/utils";
 import * as S from "./ArticleItemRow.style";
 
 const ArticleItemRow = ({ item, isEven }) => {
@@ -14,12 +17,14 @@ const ArticleItemRow = ({ item, isEven }) => {
         title,
         created_at,
     } = item;
+    const articleURL = url !== null ? url : "";
     return (
         <>
             <S.StyledArticleItemRow isEven={isEven}>
                 <Count
                     key={`comment-${objectID}`}
                     count={num_comments}
+                    commentCount
                     primary
                 />
                 <Count key={`upvote-${objectID}`} count={points} />
@@ -27,9 +32,15 @@ const ArticleItemRow = ({ item, isEven }) => {
                 <ArticleInfo
                     key={`info-${objectID}`}
                     author={author}
-                    url={url}
+                    url={articleURL}
+                    domain={articleURL && getDomain(articleURL)}
                     time={created_at}
                 />
+                <Button>
+                    <span>[ </span>
+                    {LABEL_HIDE_BTN}
+                    <span> ]</span>
+                </Button>
             </S.StyledArticleItemRow>
         </>
     );

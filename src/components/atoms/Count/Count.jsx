@@ -1,11 +1,15 @@
 import React from "react";
-import * as S from "./Count.style";
+import StyledCount from "./Count.style";
 
-const Count = ({ className, count, primary }) => {
+const Count = ({ className, count, primary, commentCount }) => {
     return (
-        <S.StyledCount className={className} primary={primary}>
+        <StyledCount
+            className={className}
+            primary={primary}
+            commentCount={commentCount}
+        >
             {count}
-        </S.StyledCount>
+        </StyledCount>
     );
 };
 

@@ -1,7 +1,8 @@
 import React from "react";
+import StyledTitle from "./Title.style";
 
-const Title = (props) => {
-    return <h3 className={props.className}>{props.title}</h3>;
+const Title = ({ className, title }) => {
+    return <StyledTitle className={className}>{title}</StyledTitle>;
 };
 
 export default Title;

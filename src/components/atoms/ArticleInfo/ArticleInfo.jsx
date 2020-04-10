@@ -1,18 +1,20 @@
 import React from "react";
+import StyledArticleInfo from "./ArticleInfo.style";
+import { LABEL_AUTHOR_BY } from "../../../constants";
 
-const ArticleInfo = (props) => {
+const ArticleInfo = ({ url, title, domain, author, time }) => {
     return (
         <>
-            <a
-                href={props.url}
-                title={props.title}
-                className={props.domainClassName}
-            >
-                {props.domain}
-            </a>
-            <span> by </span>
-            <span className={props.authorClassName}>{props.author}</span>
-            <span className={props.timeClassName}>{props.time}</span>
+            <StyledArticleInfo>
+                {url && (
+                    <a href={url} title={title} className="domainStyle">
+                        {`( ${domain} )`}
+                    </a>
+                )}
+                <span className="byLabel">{LABEL_AUTHOR_BY}</span>
+                <span className="authorText">{` ${author} `}</span>
+                <span className="timeStyle">{time}</span>
+            </StyledArticleInfo>
         </>
     );
 };
