@@ -9,13 +9,18 @@ export const StyledArticleItemRow = styled.li`
     margin: 0;
     display: flex;
 
-    div {
+    .titleWrapper {
         display: flex;
         align-items: center;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         flex-direction: column;
         align-items: start;
+
+        .titleWrapper {
+            align-items: inherit;
+            padding: 0 0 10px;
+        }
     }
 `;

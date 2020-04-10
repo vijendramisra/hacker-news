@@ -1,6 +1,7 @@
 import React from "react";
 import StyledArticleInfo from "./ArticleInfo.style";
-import { LABEL_AUTHOR_BY } from "../../../constants";
+import Button from "../Button";
+import { LABEL_AUTHOR_BY, LABEL_HIDE_BTN } from "../../../constants";
 
 const ArticleInfo = ({ url, title, domain, author, time }) => {
     return (
@@ -14,6 +15,11 @@ const ArticleInfo = ({ url, title, domain, author, time }) => {
                 <span className="byLabel">{LABEL_AUTHOR_BY}</span>
                 <span className="authorText">{` ${author} `}</span>
                 <span className="timeStyle">{time}</span>
+                <Button>
+                    <span>[ </span>
+                    {LABEL_HIDE_BTN}
+                    <span> ]</span>
+                </Button>
             </StyledArticleInfo>
         </>
     );

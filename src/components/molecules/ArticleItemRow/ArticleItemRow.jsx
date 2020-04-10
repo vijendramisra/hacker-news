@@ -2,9 +2,7 @@ import React from "react";
 import Count from "../../atoms/Count";
 import Title from "../../atoms/Title";
 import ArticleInfo from "../../atoms/ArticleInfo";
-import Button from "../../atoms/Button";
-import { LABEL_HIDE_BTN } from "../../../constants";
-import { getDomain } from "../../../utils/utils";
+import { getDomain, convertDate } from "../../../utils/utils";
 import * as S from "./ArticleItemRow.style";
 
 const ArticleItemRow = ({ item, isEven }) => {
@@ -21,7 +19,7 @@ const ArticleItemRow = ({ item, isEven }) => {
     return (
         <>
             <S.StyledArticleItemRow isEven={isEven}>
-                <div>
+                <div className="titleWrapper">
                     <Count
                         key={`comment-${objectID}`}
                         count={num_comments}
@@ -36,13 +34,8 @@ const ArticleItemRow = ({ item, isEven }) => {
                     author={author}
                     url={articleURL}
                     domain={articleURL && getDomain(articleURL)}
-                    time={created_at}
+                    time={created_at && convertDate(created_at)}
                 />
-                <Button>
-                    <span>[ </span>
-                    {LABEL_HIDE_BTN}
-                    <span> ]</span>
-                </Button>
             </S.StyledArticleItemRow>
         </>
     );

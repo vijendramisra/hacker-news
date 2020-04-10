@@ -16,7 +16,7 @@ const StyledArticleInfo = styled.div`
     }
     .authorText {
         font-size: ${(props) => props.theme.fontSizeMedium};
-        padding: 0 5px;
+        padding: 0 5px 0 0;
     }
     .timeStyle {
         font-size: ${(props) => props.theme.fontSizeMedium};
