@@ -13,5 +13,6 @@ export default {
     fontWeightMedium: 500,
     fontSizeMedium: "0.85rem",
     fontSizeSmall: "0.65rem",
+    fontSizeMediumSmall: "0.75rem",
     fontSizeBig: "1rem",
 };

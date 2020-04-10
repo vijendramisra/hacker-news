@@ -12,9 +12,11 @@ const StyledArticleInfo = styled.div`
     .byLabel {
         font-size: ${(props) => props.theme.fontSizeMedium};
         color: ${(props) => props.theme.darkTextColor};
+        padding: 0 5px;
     }
     .authorText {
         font-size: ${(props) => props.theme.fontSizeMedium};
+        padding: 0 5px;
     }
     .timeStyle {
         font-size: ${(props) => props.theme.fontSizeMedium};

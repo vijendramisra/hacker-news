@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledButton = styled.button`
+const StyledButton = styled.button`
     width: auto;
     height: auto;
     background: ${(props) => props.theme.transparentColor};
@@ -11,3 +11,4 @@ export const StyledButton = styled.button`
     text-align: center;
     border: ${(props) => props.theme.transparentColor};
 `;
+export default StyledButton;

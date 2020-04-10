@@ -21,14 +21,16 @@ const ArticleItemRow = ({ item, isEven }) => {
     return (
         <>
             <S.StyledArticleItemRow isEven={isEven}>
-                <Count
-                    key={`comment-${objectID}`}
-                    count={num_comments}
-                    commentCount
-                    primary
-                />
-                <Count key={`upvote-${objectID}`} count={points} />
-                <Title key={`title-${objectID}`} title={title} />
+                <div>
+                    <Count
+                        key={`comment-${objectID}`}
+                        count={num_comments}
+                        commentCount
+                        primary
+                    />
+                    <Count key={`upvote-${objectID}`} count={points} />
+                    <Title key={`title-${objectID}`} title={title} />
+                </div>
                 <ArticleInfo
                     key={`info-${objectID}`}
                     author={author}

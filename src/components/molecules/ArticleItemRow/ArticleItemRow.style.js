@@ -8,4 +8,14 @@ export const StyledArticleItemRow = styled.li`
     padding: 10px 40px;
     margin: 0;
     display: flex;
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: start;
+    }
 `;
