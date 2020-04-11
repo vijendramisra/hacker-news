@@ -4,7 +4,7 @@ export default {
     voteTextColor: "#aa4400",
     linkTextColor: "#a7a39a",
     orangeTextColor: "#fd652e",
-    darkTextColor: "#6f6e6e",
+    darkTextColor: "#5a2020",
     primaryRowColor: "#f5f6ef",
     secondaryRowColor: "#e6e6df",
     mainRowColor: "#ff6702",

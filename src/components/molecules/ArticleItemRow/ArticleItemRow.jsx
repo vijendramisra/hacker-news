@@ -39,6 +39,7 @@ const ArticleItemRow = ({ item, isEven }) => {
                     url={articleURL}
                     domain={articleURL && getDomain(articleURL)}
                     time={created_at && convertDate(created_at)}
+                    objectID={objectID}
                 />
             </StyledArticleItemRow>
         </>
