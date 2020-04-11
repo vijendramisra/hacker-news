@@ -9,7 +9,7 @@ const StyledArticleItemRow = styled.li`
     margin: 0;
     display: flex;
 
-    .titleWrapper {
+    .title-wrapper {
         display: flex;
         align-items: center;
     }
@@ -18,7 +18,7 @@ const StyledArticleItemRow = styled.li`
         flex-direction: column;
         align-items: start;
 
-        .titleWrapper {
+        .title-wrapper {
             align-items: inherit;
             padding: 0 0 10px;
         }

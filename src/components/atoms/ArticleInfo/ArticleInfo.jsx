@@ -8,13 +8,13 @@ const ArticleInfo = ({ url, title, domain, author, time }) => {
         <>
             <StyledArticleInfo>
                 {url && (
-                    <a href={url} title={title} className="domainStyle">
+                    <a href={url} title={title} className="domain-style">
                         {`( ${domain} )`}
                     </a>
                 )}
-                <span className="byLabel">{LABEL_AUTHOR_BY}</span>
-                <span className="authorText">{` ${author} `}</span>
-                <span className="timeStyle">{time}</span>
+                <span className="by-label">{LABEL_AUTHOR_BY}</span>
+                <span className="author-text">{` ${author} `}</span>
+                <span className="time-style">{time}</span>
                 <Button>
                     <span>[ </span>
                     {LABEL_HIDE_BTN}
