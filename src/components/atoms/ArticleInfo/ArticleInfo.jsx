@@ -1,11 +1,20 @@
 import React from "react";
 import StyledArticleInfo from "./ArticleInfo.style";
+import DataContext from "../../../context/DataContext";
 import Button from "../Button";
 import { LABEL_AUTHOR_BY, LABEL_HIDE_BTN } from "../../../constants";
 
 const ArticleInfo = ({ url, title, domain, author, time, objectID }) => {
+    const { state, dispatch } = React.useContext(DataContext);
+
     const onClick = (objectID) => {
-        alert(`clicked for ${objectID}`);
+        const data = state.data?.hits?.filter((item) => {
+            return item.objectID !== objectID;
+        });
+        dispatch({
+            type: "SET_FILTERED_HIDE_DATA",
+            payload: data,
+        });
     };
 
     return (

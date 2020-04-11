@@ -16,6 +16,14 @@ const reducer = (state, action) => {
                 ...state,
                 data: payload,
             };
+        case "SET_FILTERED_HIDE_DATA":
+            return {
+                ...state,
+                data: {
+                    ...state.data,
+                    hits: payload,
+                },
+            };
         case "SET_ERROR":
             return {
                 ...state,
