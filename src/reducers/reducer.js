@@ -19,7 +19,7 @@ const reducer = (state, action) => {
         case "SET_ERROR":
             return {
                 ...state,
-                ...payload,
+                isError: true,
             };
         default:
             return state;

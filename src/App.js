@@ -33,7 +33,6 @@ function App() {
                 (error) => {
                     dispatch({
                         type: "SET_ERROR",
-                        payload: { isError: true },
                     });
                 }
             );
