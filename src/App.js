@@ -18,7 +18,7 @@ function App() {
         dispatch({
             type: "FETCH_DATA_PENDING",
         });
-        fetch("http://hn.algolia.com/api/v1/search?query=foo&tags=story")
+        fetch("//hn.algolia.com/api/v1/search?query=foo&tags=story")
             .then((res) => res.json())
             .then(
                 (results) => {
