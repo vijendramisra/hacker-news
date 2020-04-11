@@ -10,5 +10,16 @@ const StyledButton = styled.button`
     display: inline-block;
     text-align: center;
     border: ${(props) => props.theme.transparentColor};
+    cursor: pointer;
+
+    .arrow-up {
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 10px solid ${(props) => props.theme.arrowColor};
+        position: relative;
+        bottom: 12px;
+    }
 `;
 export default StyledButton;

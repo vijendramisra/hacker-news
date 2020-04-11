@@ -4,3 +4,4 @@ export const LABEL_MORE_BTN = "More";
 export const LABEL_FILTER_TOP_BTN = "top";
 export const LABEL_FILTER_NEW_BTN = "new";
 export const LABEL_LOGO = "Y";
+export const API_URL = "//hn.algolia.com/api/v1/search?";

@@ -2,6 +2,7 @@ import React from "react";
 import Count from "../../atoms/Count";
 import Title from "../../atoms/Title";
 import ArticleInfo from "../../atoms/ArticleInfo";
+import Button from "../../atoms/Button";
 import { getDomain, convertDate } from "../../../utils/utils";
 import StyledArticleItemRow from "./ArticleItemRow.style";
 
@@ -19,7 +20,7 @@ const ArticleItemRow = ({ item, isEven }) => {
     return (
         <>
             <StyledArticleItemRow isEven={isEven}>
-                <div className="titleWrapper">
+                <div className="title-wrapper">
                     <Count
                         key={`comment-${objectID}`}
                         count={num_comments}
@@ -27,6 +28,9 @@ const ArticleItemRow = ({ item, isEven }) => {
                         primary
                     />
                     <Count key={`upvote-${objectID}`} count={points} />
+                    <Button ariaLabel="Vote Up">
+                        <span className="arrow-up"></span>
+                    </Button>
                     <Title key={`title-${objectID}`} title={title} />
                 </div>
                 <ArticleInfo
@@ -35,6 +39,7 @@ const ArticleItemRow = ({ item, isEven }) => {
                     url={articleURL}
                     domain={articleURL && getDomain(articleURL)}
                     time={created_at && convertDate(created_at)}
+                    objectID={objectID}
                 />
             </StyledArticleItemRow>
         </>

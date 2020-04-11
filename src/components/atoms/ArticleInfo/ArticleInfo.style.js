@@ -9,18 +9,26 @@ const StyledArticleInfo = styled.div`
             text-decoration: underline;
         }
     }
-    .byLabel {
+    .by-label {
         font-size: ${(props) => props.theme.fontSizeMedium};
         color: ${(props) => props.theme.darkTextColor};
         padding: 0 5px;
     }
-    .authorText {
+    .author-text {
         font-size: ${(props) => props.theme.fontSizeMedium};
         padding: 0 5px 0 0;
     }
-    .timeStyle {
+    .time-style {
         font-size: ${(props) => props.theme.fontSizeMedium};
         color: ${(props) => props.theme.darkTextColor};
+    }
+
+    @media screen and (max-width: 1024px) {
+        padding-left: 130px;
+    }
+
+    @media screen and (max-width: 425px) {
+        padding-left: 125px;
     }
 `;
 
