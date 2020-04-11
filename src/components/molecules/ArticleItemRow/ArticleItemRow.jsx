@@ -3,7 +3,7 @@ import Count from "../../atoms/Count";
 import Title from "../../atoms/Title";
 import ArticleInfo from "../../atoms/ArticleInfo";
 import { getDomain, convertDate } from "../../../utils/utils";
-import * as S from "./ArticleItemRow.style";
+import StyledArticleItemRow from "./ArticleItemRow.style";
 
 const ArticleItemRow = ({ item, isEven }) => {
     const {
@@ -18,7 +18,7 @@ const ArticleItemRow = ({ item, isEven }) => {
     const articleURL = url !== null ? url : "";
     return (
         <>
-            <S.StyledArticleItemRow isEven={isEven}>
+            <StyledArticleItemRow isEven={isEven}>
                 <div className="titleWrapper">
                     <Count
                         key={`comment-${objectID}`}
@@ -36,7 +36,7 @@ const ArticleItemRow = ({ item, isEven }) => {
                     domain={articleURL && getDomain(articleURL)}
                     time={created_at && convertDate(created_at)}
                 />
-            </S.StyledArticleItemRow>
+            </StyledArticleItemRow>
         </>
     );
 };

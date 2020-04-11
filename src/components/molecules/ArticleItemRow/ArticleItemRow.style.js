@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledArticleItemRow = styled.li`
+const StyledArticleItemRow = styled.li`
     background: ${(props) =>
         props.isEven
             ? props.theme.primaryRowColor
@@ -24,3 +24,5 @@ export const StyledArticleItemRow = styled.li`
         }
     }
 `;
+
+export default StyledArticleItemRow;
