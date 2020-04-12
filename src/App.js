@@ -15,7 +15,6 @@ const initialState = {
 
 function App() {
     const [state, dispatch] = React.useReducer(reducer, initialState);
-
     const getAPIQuery = (pageNum) => {
         return `query=foo&tags=story&page=${pageNum}`;
     };

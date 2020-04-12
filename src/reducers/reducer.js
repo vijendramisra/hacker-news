@@ -24,7 +24,7 @@ const reducer = (state, action) => {
                 ...state,
                 data: payload,
             };
-        case "SET_FILTERED_HIDE_DATA":
+        case "SET_UPVOTE_HIDE_DATA":
             return {
                 ...state,
                 data: {

@@ -27,10 +27,9 @@ const ArticleInfo = ({ url, title, domain, author, time, objectID }) => {
         const data = state.data?.hits?.filter((item) => {
             return item.objectID !== objectID;
         });
-
         setItemInStorage(objectID);
         dispatch({
-            type: "SET_FILTERED_HIDE_DATA",
+            type: "SET_UPVOTE_HIDE_DATA",
             payload: data,
         });
     };
