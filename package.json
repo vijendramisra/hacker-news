@@ -17,13 +17,14 @@
     "scripts": {
         "start-local": "react-scripts start",
         "start": "node server.js",
+        "lint": "eslint src/**/*.jsx",
         "build": "react-scripts build",
         "test": "react-scripts test --watchAll=false",
         "eject": "react-scripts eject"
     },
     "husky": {
         "hooks": {
-            "pre-commit": "yarn test"
+            "pre-commit": "yarn lint && yarn test"
         }
     },
     "jest": {

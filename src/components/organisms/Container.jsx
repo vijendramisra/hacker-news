@@ -22,10 +22,10 @@ const Container = () => {
                 <Header />
                 <ArticleListContainer />
                 <Button
-                    className="moreButton"
+                    className="more-button"
                     onCLickHandler={() => loadMoreData()}
                 >
-                    {LABEL_MORE_BTN}
+                    <span className="load-more">{LABEL_MORE_BTN}</span>
                 </Button>
             </ThemeProvider>
         </div>
