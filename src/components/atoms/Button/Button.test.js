@@ -1,9 +1,9 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Button from "./Button";
+import StyledButton from "./Button.style";
 
 test("button atom is rendering", () => {
-    const { getByText } = render(<Button>Submit</Button>);
+    const { getByText } = render(<StyledButton>Submit</StyledButton>);
     const buttonElement = getByText(/Submit/i);
     expect(buttonElement).toBeInTheDocument();
 });

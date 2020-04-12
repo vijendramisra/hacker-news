@@ -17,20 +17,18 @@ const Container = () => {
     };
 
     return (
-        <>
-            <div className="App">
-                <ThemeProvider theme={defaultTheme}>
-                    <Header />
-                    <ArticleListContainer />
-                    <Button
-                        className="moreButton"
-                        onCLickHandler={() => loadMoreData()}
-                    >
-                        {LABEL_MORE_BTN}
-                    </Button>
-                </ThemeProvider>
-            </div>
-        </>
+        <div className="App">
+            <ThemeProvider theme={defaultTheme}>
+                <Header />
+                <ArticleListContainer />
+                <Button
+                    className="moreButton"
+                    onCLickHandler={() => loadMoreData()}
+                >
+                    {LABEL_MORE_BTN}
+                </Button>
+            </ThemeProvider>
+        </div>
     );
 };
 

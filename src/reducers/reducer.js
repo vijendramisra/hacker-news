@@ -12,9 +12,25 @@ const reducer = (state, action) => {
                 isLoading: false,
             };
         case "SET_DATA":
+            const retrievedData = localStorage.getItem("articleData");
+            const retrievedObject = JSON.parse(retrievedData) || [];
+
+            payload.hits = payload.hits.filter(
+                (ar) =>
+                    !retrievedObject.find((rm) => rm.objectID === ar.objectID)
+            );
+
             return {
                 ...state,
                 data: payload,
+            };
+        case "SET_FILTERED_HIDE_DATA":
+            return {
+                ...state,
+                data: {
+                    ...state.data,
+                    hits: payload,
+                },
             };
         case "SET_ERROR":
             return {

@@ -18,13 +18,31 @@
         "start-local": "react-scripts start",
         "start": "node server.js",
         "build": "react-scripts build",
-        "test": "react-scripts test",
+        "test": "react-scripts test --watchAll=false",
         "eject": "react-scripts eject"
     },
     "husky": {
         "hooks": {
-            "pre-commit": "yarn test --watchAll=false"
+            "pre-commit": "yarn test"
         }
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx,ts,tsx}",
+            "!<rootDir>/node_modules/",
+            "!<rootDir>/public/"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "branches": 90,
+                "functions": 90,
+                "lines": 90,
+                "statements": 90
+            }
+        },
+        "coverageReporters": [
+            "text"
+        ]
     },
     "eslintConfig": {
         "extends": [

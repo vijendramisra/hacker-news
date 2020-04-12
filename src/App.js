@@ -50,7 +50,9 @@ function App() {
     }, [state.currentPageNum]);
 
     return state.isLoading ? (
-        <Loader />
+        <div className="loader-container">
+            <Loader />
+        </div>
     ) : (
         <DataContext.Provider
             value={{
