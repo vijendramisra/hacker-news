@@ -5,3 +5,5 @@ export const StyledArticleListContainer = styled.ul`
     padding: 0;
     list-style: none;
 `;
+
+export default StyledArticleListContainer;

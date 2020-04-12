@@ -8,3 +8,5 @@ export const StyledHeader = styled.div`
     padding: 10px;
     display: flex;
 `;
+
+export default StyledHeader;

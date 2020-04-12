@@ -21,5 +21,13 @@ const StyledButton = styled.button`
         position: relative;
         bottom: 12px;
     }
+    .load-more {
+        padding: 10px 20px;
+        margin: 0 0 0 15px;
+        display: inline-block;
+        font-size: ${(props) => props.theme.fontLarge};
+        font-weight: ${(props) => props.theme.fontWeightMedium};
+        color: ${(props) => props.theme.darkTextColor};
+    }
 `;
 export default StyledButton;
