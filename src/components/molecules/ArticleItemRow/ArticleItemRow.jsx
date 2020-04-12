@@ -2,11 +2,13 @@ import React from "react";
 import Count from "../../atoms/Count";
 import Title from "../../atoms/Title";
 import ArticleInfo from "../../atoms/ArticleInfo";
+import DataContext from "../../../context/DataContext";
 import Button from "../../atoms/Button";
 import { getDomain, convertDate } from "../../../utils/utils";
 import StyledArticleItemRow from "./ArticleItemRow.style";
 
 const ArticleItemRow = ({ item, isEven }) => {
+    const { state, dispatch } = React.useContext(DataContext);
     const {
         num_comments,
         objectID,
@@ -17,6 +19,21 @@ const ArticleItemRow = ({ item, isEven }) => {
         created_at,
     } = item;
     const articleURL = url !== null ? url : "";
+
+    const onUpVoteClick = (objectID) => {
+        const currentData = { ...state };
+        const updatedState = currentData.data?.hits?.map((item) => {
+            if (item.objectID === objectID) {
+                item.points = item.points + 1;
+            }
+            return item;
+        });
+        dispatch({
+            type: "SET_UPVOTE_HIDE_DATA",
+            payload: updatedState,
+        });
+    };
+
     return (
         <>
             <StyledArticleItemRow isEven={isEven}>
@@ -28,7 +45,10 @@ const ArticleItemRow = ({ item, isEven }) => {
                         primary
                     />
                     <Count key={`upvote-${objectID}`} count={points} />
-                    <Button ariaLabel="Vote Up">
+                    <Button
+                        ariaLabel="Vote Up"
+                        onCLickHandler={() => onUpVoteClick(objectID)}
+                    >
                         <span className="arrow-up"></span>
                     </Button>
                     <Title key={`title-${objectID}`} title={title} />
