@@ -20,13 +20,13 @@ const ArticleItemRow = ({ item, isEven }) => {
     } = item;
     const articleURL = url !== null ? url : "";
 
-    const onUpVoteClick = (objectID) => {
+    const onUpVoteClick = (objID) => {
         const currentData = { ...state };
-        const updatedState = currentData.data?.hits?.map((item) => {
-            if (item.objectID === objectID) {
-                item.points = item.points + 1;
+        const updatedState = currentData.data?.hits?.map((val) => {
+            if (val.objectID === objID) {
+                val.points = val.points + 1;
             }
-            return item;
+            return val;
         });
         dispatch({
             type: "SET_UPVOTE_HIDE_DATA",
