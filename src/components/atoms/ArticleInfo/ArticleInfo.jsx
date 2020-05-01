@@ -7,7 +7,7 @@ import { LABEL_AUTHOR_BY, LABEL_HIDE_BTN } from "../../../constants";
 const ArticleInfo = ({ url, title, domain, author, time, objectID }) => {
     const { state, dispatch } = React.useContext(DataContext);
 
-    const setItemInStorage = () => {
+    const setItemInStorage = (objID) => {
         let articleData = [];
         const retrievedData = localStorage.getItem("articleData");
 
@@ -15,7 +15,7 @@ const ArticleInfo = ({ url, title, domain, author, time, objectID }) => {
         articleData = [
             ...retrievedObject,
             {
-                objectID,
+                objectID: objID,
                 hide: true,
             },
         ];
@@ -23,11 +23,11 @@ const ArticleInfo = ({ url, title, domain, author, time, objectID }) => {
         localStorage.setItem("articleData", JSON.stringify(articleData));
     };
 
-    const onClick = (objectID) => {
+    const onClick = (itmId) => {
         const data = state.data?.hits?.filter((item) => {
-            return item.objectID !== objectID;
+            return item.objectID !== itmId;
         });
-        setItemInStorage(objectID);
+        setItemInStorage(itmId);
         dispatch({
             type: "SET_UPVOTE_HIDE_DATA",
             payload: data,
